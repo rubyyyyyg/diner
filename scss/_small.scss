@@ -17,20 +17,27 @@ body {
     font-family: $defaultFont;
     font-weight: $lightWeight;
     min-width: 320px;
+    background-color: $primaryColor;
 }
 
 
+
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+
 header {
     display: grid;
     grid-template-columns: 50px auto;
     column-gap: $gutter;
     align-items: center; //vertically
     padding: .5rem $gutter;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+   
     span {
         font-size: 1.6rem;
-        font-weight: $lightWeight;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 1.5rem;
         color: $primaryColor;
     }
 } // end header
@@ -38,10 +45,50 @@ header {
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 
+nav {
+    background-color: $accentColor;
+    color: $secondaryColor;
 
+}
+#myButton::before {
+    content: "\2630";
+}
 
+#myButton {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    font-weight: $lightWeight;
+    cursor: pointer;
+}
 
+ul.menuLinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    li a {
+        color: #fff;
+        display: block;
+        padding: .75rem $gutter;
+        text-decoration: none;
+    }
+    li.active a {
+        background-color: rgba(255,255,255,.2);
+    }
+}
 
+ul.open.menuLinks {
+    display: block;
+}
+
+#myButton.open::before {
+    content: 'x';
+}
 
 
 
@@ -57,27 +104,101 @@ main {
         padding: 1rem $gutter.5rem $gutter;
         font-size: 1.5rem;
         color: $secondaryColor;
-        font-weight: $lightWeight
+        font-weight: $lightWeight;
     }
     p {
         padding: .5rem $gutter;
-        color: #333;
+        color: $secondaryColor;
         line-height: $leading;
     }
 }// end main
 
+.allcards {
+    padding: 0 $gutter;
+    section {
+        border: 1px solid $accentColor;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        background-color: $accentColor;
+        h2, p, img {
+            margin: 0;
+            padding: 1rem $gutter;
+            color: $primaryColor;
+        }
+        h2{
+        background-color: $secondaryColor;
+        font-size: 1.5rem;
+        text-align: center;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            display: block;
+        }
+        p {
+            font-style: italic;
+            color: white;
+        }
+        a {
+            display: block;
+            background-color: $secondaryColor;
+            padding: .75rem;
+            text-align: center;
+            margin: 0 3rem 1rem 3rem;
+            border-radius: 10px;
+            color: $primaryColor;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: $primaryColor;
+            color: $secondaryColor;
+        }
+    }
+}
 
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-    background-color: $primaryColor
+    background-color: $secondaryColor;
 } // end footer wrapper
 
 footer {
     font-size: .85rem;
     padding: 1rem $gutter;
-    color: $greyColor;
+    color: $primaryColor;
     text-align: center;
     line-height: $leading;
-    a {color: $greyColor;}
+    a {color: $primaryColor;}
+    .contact {
+        p{font-size: 1.2 rem; margin: .5rem;}
+        ion-icon{color: $primaryColor; padding-right: 5px;}
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+        a {
+            display: block;
+            font-size: 2rem;
+            margin: .5rem;
+            padding: .5rem;
+            color: $primaryColor;
+        }
+        a:hover{
+            background-color: $accentColor;
+            color: $secondaryColor;
+        }
+    }
+    .location {
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+
+    p.legal {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+
+    }
 }// end footer
