@@ -458,8 +458,12 @@ footer {
 footer a {
   color: #25344f;
 }
+footer .contact h6 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 footer .contact p {
-  font-size: 1.2 rem;
+  font-size: 1.2rem;
   margin: 0.5rem;
 }
 footer .contact ion-icon {

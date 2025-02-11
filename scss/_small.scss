@@ -172,7 +172,11 @@ footer {
     line-height: $leading;
     a {color: $primaryColor;}
     .contact {
-        p{font-size: 1.2 rem; margin: .5rem;}
+        h6 {
+            font-size: 1.2rem;
+            font-weight: $normalWeight;
+        }
+        p{font-size: 1.2rem; margin: .5rem;}
         ion-icon{color: $primaryColor; padding-right: 5px;}
     }
     .social {
